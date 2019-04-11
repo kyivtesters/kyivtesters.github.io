@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
 }
@@ -7,36 +11,47 @@ html {
     font-size: 14pt;
 }
 
+div.main a {
+    color: teal;
+    text-decoration-line: none;
+    border-bottom: 2px dotted teal;
+}
+
+div.main a:hover {
+    background-color: aqua;
+}
+
 .wrapper {
     /*display: flex;*/
     /*flex-direction: column;*/
+    /*min-height: 100%;*/
 }
 
 .mobileActions {
-    display: none;
+    flex-direction: column;
+    margin-left: auto;
+    flex-wrap: wrap;
 }
 
-/*@media (min-width: 750px) {*/
-    .mobileActions {
-        display: flex;
-        margin-left: auto;
-        flex-wrap: wrap;
-    }
+.mobileActions a {
+    font-size: 18pt;
+    color: white;
+    padding-left: 25px;
+    padding-top: 3%;
+}
 
-    .mobileActions a {
-        font-size: 18pt;
-        color: white;
-        padding-left: 25px;
-        padding-top: 3%;
+@media (min-width: 750px) {
+    .mobileActions {
+        flex-direction: row;
+        display: flex;
     }
-/*}*/
+}
 
 header {
-    padding: 20px 16px;
+    padding: 1% 6%;
     background: black;
     color: #f1f1f1;
     display: flex;
-    /*width: 90%;*/
 }
 
 /*footer {*/
@@ -54,9 +69,10 @@ header {
 
 div.main {
     display: flex;
+    flex: 1;
     flex-wrap: wrap;
     /*width: 90%;*/
-    /*height: 90%;*/
+    min-height: 100%;
     align-self: center;
     background-color: white;
 }
@@ -66,15 +82,16 @@ div.main {
     padding-left: 20px;
     padding-right: 20px;
     min-width: 200px;
-    max-width: 850px;
+    max-width: 800px;
     /*flex-direction: column;*/
     /*width: 90%;*/
     /*margin-left: auto;*/
     /*margin-right: auto;*/
     /*padding-top: 2%;*/
-    /*line-height: 1.2em;*/
+    line-height: 1.3em;
     flex-grow: 1;
   }
+
 
 .main article.announcements {
     max-width: 350px;
@@ -82,9 +99,9 @@ div.main {
   }
 
   article p.pinned {
-      padding-left: 15px;
+      padding: 15px;
       background-color: bisque;
-      line-height: 30px;
+      line-height: 1.5em;
   }
 
 
